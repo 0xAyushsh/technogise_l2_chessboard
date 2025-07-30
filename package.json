@@ -1,0 +1,14 @@
+{
+  "name": "chessboard",
+  "version": "1.0.0",
+  "description": "Chessboard CLI program",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "[chess][chessboard]"
+  ],
+  "author": "Ayush",
+  "license": "ISC"
+}
