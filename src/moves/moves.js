@@ -8,7 +8,6 @@ const getPawnMoves = (col, row) => {
 };
 
 const getKingMoves = (col, row) => {
-    console.log('wooeaw',col,row)
     let moves = []
     const colIndex = colToIndex(col)
 
@@ -84,9 +83,8 @@ const getQueenMoves = (col, row) => {
 
 const getPossibleMoves = (input) => {
     let [piece, position] = input.split(',').map(s => s.trim())
-    let col = position[0]
+    let col = position[0].toUpperCase()
     let row = parseInt(position[1])
-    console.log('input',input,col,row)
 
     switch(piece.toLowerCase()) {
         case 'pawn': 
