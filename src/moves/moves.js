@@ -8,6 +8,7 @@ const getPawnMoves = (col, row) => {
 };
 
 const getKingMoves = (col, row) => {
+    console.log('wooeaw',col,row)
     let moves = []
     const colIndex = colToIndex(col)
 
@@ -85,17 +86,15 @@ const getPossibleMoves = (input) => {
     let [piece, position] = input.split(',').map(s => s.trim())
     let col = position[0]
     let row = parseInt(position[1])
+    console.log('input',input,col,row)
 
     switch(piece.toLowerCase()) {
         case 'pawn': 
-            getPawnMoves(col, row);
-            break;
+            return getPawnMoves(col, row);
         case 'king': 
-            getKingMoves(col, row);
-            break;
+            return getKingMoves(col, row);
         case 'queen': 
-            getQueenMoves(col, row);
-            break;
+            return getQueenMoves(col, row);
         default: 
             throw new Error("Invalid input. Please choose between 'King', 'Queen' or 'Pawn'");
     }
