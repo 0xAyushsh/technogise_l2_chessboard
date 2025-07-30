@@ -15,6 +15,15 @@ test('Queen basic moves', () => {
     expect(moves).toContain('H1');
 });
 
+test('Pawn at row 8', () => {
+    expect(getPawnMoves('G', 8)).toEqual([]);
+});
+
+test('King in corner', () => {
+    expect(getKingMoves('A', 1).sort()).toEqual(['A2','B1','B2'].sort());
+});
+
+
 test('getPossibleMoves invalid', () => {
     expect(() => getPossibleMoves('Dragon, D5')).toThrow();
 });
