@@ -4,11 +4,15 @@
   "description": "Chessboard CLI program",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "test": "jest"
   },
   "keywords": [
     "[chess][chessboard]"
   ],
   "author": "Ayush",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
